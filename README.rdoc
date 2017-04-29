@@ -26,5 +26,9 @@ The process used to develop this app are as follows :-
 4. Added controller with spec and routing spec as I use rspec to unit test the lower level detail
 5. Added twitter bootstrap for styling
 6. README updated and format changed to rdoc
+7. Added Location model with spec
+8. 'random-location' gem added which returns latitude and longitude for a location near to a coordinate
+9. Reference latitude and longitude 0,0 added with a distance range 10,000 km for 'random-location'
+
 
 
