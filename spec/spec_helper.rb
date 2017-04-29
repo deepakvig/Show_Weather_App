@@ -16,7 +16,20 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'webmock/rspec'
+include WebMock
+
 RSpec.configure do |config|
+  config.before(:each) do
+    stub_request(:get, /api.openweathermap.org/).
+      with(headers: {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
+      to_return(status: 200, body: '{"cod": 200, "name": "London", "coord": {"lon": -0.13, "lat": 51.51}, "main": {"temp": 280.32,
+        "pressure": 1012,
+        "humidity": 81,
+        "temp_min": 279.15,
+        "temp_max": 281.15}, "wind": {"speed": 4.1, "deg": 80}, "clouds": {"all": 90}}', headers: {})
+  end
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
