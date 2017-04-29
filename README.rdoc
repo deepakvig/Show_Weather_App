@@ -1,0 +1,30 @@
+== README
+
+Ruby on Rails Showing Weather Forecast Application
+
+To Get Started:
+
+Type 'bundle' in the application directory, then prefix normal commands such as 'rake', 'rspec' etc. with 'bundle exec' (unless you have rvm installed)
+Type 'rake db:migrate'
+
+To Run Tests:
+
+Type: 'rspec' for running all tests
+
+To see the web app running :-
+
+Type 'rails server'
+
+
+=== Development Process
+
+The process used to develop this app are as follows :-
+
+1. I started off with a blank rails application configured with rvm to use ruby 2.3.0
+2. Added testing suite (rspec, capybara..)
+3. Added an initial feature for the home page (not passing at this point)
+4. Added controller with spec and routing spec as I use rspec to unit test the lower level detail
+5. Added twitter bootstrap for styling
+6. README updated and format changed to rdoc
+
+
