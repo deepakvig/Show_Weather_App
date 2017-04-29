@@ -29,6 +29,5 @@ The process used to develop this app are as follows :-
 7. Added Location model with spec
 8. 'random-location' gem added which returns latitude and longitude for a location near to a coordinate
 9. Reference latitude and longitude 0,0 added with a distance range 10,000 km for 'random-location'
-
-
-
+10. Added Weather_Detail module with specs
+11. Added 'webmock' gem to stub get request with predefined data
