@@ -1,4 +1,7 @@
 class Location
+  include ActiveModel::Conversion
+  extend  ActiveModel::Naming
+
   include WeatherDetail
   
   # Reference Latitude
@@ -41,5 +44,9 @@ class Location
     self.random_geo_coord( limit ).each do |loc|
       loc.weather_detail
     end
+  end 
+
+  def persisted?
+    false
   end  
 end

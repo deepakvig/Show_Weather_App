@@ -40,5 +40,36 @@ describe 'navigate' do
         end
       end
     end
+
+    describe 'form' do
+      it 'exists' do
+        expect(page).to have_css 'form'
+      end
+
+      it 'has 2 input fields' do
+        expect(page).to have_css("input[type='text']", count: 2)
+      end
+
+      it 'has city field' do
+        expect(page).to have_css("input[name*='location[city]']", count: 1)
+      end
+
+      it 'has country field' do
+        expect(page).to have_css("input[name*='location[country]']", count: 1)
+      end
+
+      it 'has submit button' do
+        expect(page).to have_css("input[type='submit']", count: 1)
+      end
+
+      it 'submits data to ' do
+        within 'form' do
+          find('input[name="location[city]"]').set "Berlin" 
+          find('input[name="commit"]').click
+        end
+
+        expect(page).to have_content 'Created'
+      end
+    end
   end
 end

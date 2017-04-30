@@ -33,3 +33,4 @@ The process used to develop this app are as follows :-
 11. Added 'webmock' gem to stub get request with predefined data
 12. Updated Location model to support fetching weather details using Weather Detail module with specs
 13. Update Forecasts Controller to get random locations with weather details
+14. Added Locations Controller, search form and libs added to location model, Specs added for routes, form and controller
