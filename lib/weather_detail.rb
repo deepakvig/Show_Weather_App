@@ -45,6 +45,8 @@ module WeatherDetail
   end
 
   def set_params(options)
+    options[:units] ||= "metric" 
+
     uri = URI(ENDPOINT)
     query_params = {appid: Rails.application.secrets.openweather_api_key}
     uri.query = URI.encode_www_form(query_params.merge(lat: options[:lat], lon: options[:lon], units: options[:units])) if options[:lat] && options[:lon]

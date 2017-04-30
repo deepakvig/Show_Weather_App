@@ -1,3 +1,26 @@
-<div class="intro">
-  <h1>Weather Forecast</h1>
+<div class="container">
+  <h2>Weather Details</h2>
+  <p>At random geographic coordinates</p>            
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Geo coords</th>
+        <th>City</th>
+        <th>Temp</th>
+        <th>Humidity</th>
+        <th>Wind Speed</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @locations.each do |loc| %>
+      <tr>
+        <td><%= "[#{loc.lat}, #{loc.lon}]" %></td>
+        <td><%= loc.city %></td>
+        <td><%= loc.temperature %> &#8451;</td>
+        <td><%= loc.humidity %> %</td>
+        <td><%= loc.wind_speed %> m/sec</td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
