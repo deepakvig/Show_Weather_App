@@ -14,6 +14,7 @@ module WeatherDetail
     return {} unless json
 
     data[:city] = json['name']
+    data[:country] = json['sys'] && json['sys']['country']
     data[:longitude] = json['coord'] && json['coord']['lon']
     data[:latitude] = json['coord'] && json['coord']['lat']
     data[:temperature] = json['main']['temp']

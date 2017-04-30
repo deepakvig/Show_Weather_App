@@ -10,6 +10,7 @@ RSpec.describe WeatherDetail do
 
   it "should get proper response with proper keys" do
     expect(subject.get_weather_details).to have_key(:city)
+    expect(subject.get_weather_details).to have_key(:country)
     expect(subject.get_weather_details).to have_key(:longitude)
     expect(subject.get_weather_details).to have_key(:latitude)
     expect(subject.get_weather_details).to have_key(:temperature)
