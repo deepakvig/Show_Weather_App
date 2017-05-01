@@ -38,6 +38,14 @@ RSpec.describe Location, type: :model do
     end
   end
 
+  describe "valid city" do
+    it "should raise error if valid_city method called with location having city" do
+      @location = Location.new(lat: 0, lon: 0)
+      @location.weather_detail
+      expect(@location.errors).not_to be_nil
+    end
+  end
+
   describe "Class method" do
     it "should include class method random_geo_coord" do
       expect(Location).to respond_to(:random_geo_coord)
