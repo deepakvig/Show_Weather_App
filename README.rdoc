@@ -38,3 +38,9 @@ The process used to develop this app are as follows :-
 16. Added Weather Details section to view Details of searched Location, specs added. Ajax form added. Locations controller update and specs added
 17. Validation added to match typed in City name with the response
 
+
+=== Things to improve
+
+1. Add caching for fetched weather data
+2. Refactor Location model some more
+3. Add Google map for showing the location of city and also same for the random geo coordinates that are shown
