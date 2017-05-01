@@ -1,1 +1,7 @@
-<h1>Created</h1>
+<% if @errors %>
+  <% @errors.full_messages.each do |msg| %>
+	<%= msg %>
+  <% end %>
+<% else %>
+  <%= render 'weather_details' %>
+<% end %>

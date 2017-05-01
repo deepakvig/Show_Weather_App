@@ -62,13 +62,22 @@ describe 'navigate' do
         expect(page).to have_css("input[type='submit']", count: 1)
       end
 
-      it 'submits data to ' do
+      it 'submits data' do
         within 'form' do
-          find('input[name="location[city]"]').set "Berlin" 
+          find('input[name="location[city]"]').set "London" 
           find('input[name="commit"]').click
         end
+        
+        expect(page).to have_content 'London'
+      end
 
-        expect(page).to have_content 'Created'
+      it 'submits without city should display error' do
+        within 'form' do
+          find('input[name="location[city]"]').set "" 
+          find('input[name="commit"]').click
+        end
+        
+        expect(page).to have_content 'City is required'
       end
     end
   end

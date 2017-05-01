@@ -1,0 +1,37 @@
+<div class="col-md-offset-2 col-md-4">
+  <div class="panel panel-default">
+  	<div class="panel-heading">
+      Details
+    </div>
+  	<div class="panel-body">
+      <table class="table">
+      	<tbody>
+          <tr>
+          	<th>City</th>
+            <td><%= "#{@location.city},#{@location.country}" %></td>
+          </tr>
+          <tr>
+            <th>Geo Coords</th>
+            <td><%= "[#{@location.lat},#{@location.lon}]" %></td>
+          </tr>
+          <tr>
+            <th>Temperature</th>
+            <td><%= @location.temperature %> &#8451;</td>
+          </tr>
+          <tr>
+            <th>Humidity</th>
+            <td><%= @location.humidity %> %</td>
+          </tr>
+          <tr>
+            <th>Wind Speed</th>
+            <td><%= @location.wind_speed %> m/sec</td>
+          </tr>
+          <tr>
+            <th>Cloudiness</th>
+            <td><%= @location.clouds %> %</td>
+          </tr>
+        </tbody>
+  	  </table>
+    </div>
+  </div>
+</div>

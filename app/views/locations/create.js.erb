@@ -1,0 +1,7 @@
+<% if @errors %>
+	$('#weather_details').html("");	
+	$("#notice").removeClass("hide").html("<%= @errors.full_messages.first %>");
+<% else %>
+	$("#notice").addClass("hide");
+	$('#weather_details').html("<%= escape_javascript (render partial: 'weather_details') %>");
+<% end %>
