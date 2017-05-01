@@ -8,6 +8,7 @@ class LocationsController < ApplicationController
       @errors = loc.errors
     else
       @location = loc.weather_detail
+      @errors = loc.errors if loc.errors.any?
     end
   end
 

@@ -29,6 +29,7 @@ class Location
 
   def weather_detail
     res = get_weather_details lat: self.lat, lon: self.lon, city: self.city, country: self.country
+    errors.add(:city, 'details not found') if !self.city.blank? && (res[:city].blank? || !res[:city].include?(self.city))
     ATTRS.each do |attr|
       send("#{attr.to_s}=", res[attr])
     end 

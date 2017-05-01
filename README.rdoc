@@ -36,4 +36,5 @@ The process used to develop this app are as follows :-
 14. Added Locations Controller, search form and libs added to location model, Specs added for routes, form and controller
 15. Added Location model validation for checking city presence, specs added
 16. Added Weather Details section to view Details of searched Location, specs added. Ajax form added. Locations controller update and specs added
+17. Validation added to match typed in City name with the response
 
