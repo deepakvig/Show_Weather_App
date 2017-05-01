@@ -35,3 +35,5 @@ The process used to develop this app are as follows :-
 13. Update Forecasts Controller to get random locations with weather details
 14. Added Locations Controller, search form and libs added to location model, Specs added for routes, form and controller
 15. Added Location model validation for checking city presence, specs added
+16. Added Weather Details section to view Details of searched Location, specs added. Ajax form added. Locations controller update and specs added
+
